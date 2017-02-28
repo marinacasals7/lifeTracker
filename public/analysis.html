@@ -39,33 +39,29 @@
       <h2 align="center"><font color="red"><font size=6><b>Analysis</b> </font></font></h2>
       <div class="row tracker-heading">
           <div class="col-md-3">
-          <h3>Existing Goals</h3>
+          <h3><b>Existing Goals</b></h3>
           </div>
-          <div class="col-md-3 col-md-offset-1">
-          <h3>Days Accomplished </h3>
+          <div class="col-md-3 ">
+          <h3><b>Days Accomplished</b> </h3>
         </div>
-        <div class="col-md-3 col-md-offset-1">
-        <h3>Days unfulfilled </h3>
+        <div class="col-md-3 ">
+        <h3><b>Days unfulfilled</b> </h3>
       </div>
+      <div class="col-md-3">
+      <h3><b>Porcentaje</b> </h3>
+    </div>
         </div>
       </div>
       <div ng-repeat="goal in goals" class="form-group row form-row">
         <div class"cols-xs-1">
-        <div class="col-xs-9"><font size=4><b>{{goal.description}}</b></font></div>
+        <div class="col-xs-3"><font size=3><b>{{goal.description}}</b></font></div>
       </div>
-      <div class="col-xs-2 goal col-xs-offset-1">
-        <div class="col-xs-1">{{goal.percentage}}%</div>
-      </div>
-            <div class="pull-left">
-            <label class="btn btn-success">
-              <span class="glyphicon glyphicon-ok" aria-hidden="true" ng-click="addOk(goal)"></span>
-            </label>
-            <label class="btn btn-danger">
-              <span class="glyphicon glyphicon-remove" aria-hidden="true" ng-click="addKo(goal)"></span>
-            </label>
-          </div>
-        </div>
-      </div>
+        <div class="col-md-3 "><button type="button" class="btn btn-success">{{goal.ok}}</button></div>
+
+      <div class="col-md-3 "><button type="button" class="btn btn-danger">{{goal.ko}}</button></div>
+
+        <div class="col-md-3"><button type="button" class="btn btn-info">{{goal.percentage}}%</button></div>
+
     </div>
     <hr>
     <footer>
