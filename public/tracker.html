@@ -49,18 +49,18 @@
         <input type="date" ng-model="day" class="form-control" ng-change="loadDay(day, goals)"/>
        </div>
       <div ng-repeat="goal in goals" class="form-group row form-row">
-        <div class="col-xs-8 goal">{{goal.description}}</div>
-        <div class="col-xs-1 goal">{{goal.result}}</div>
-
-        <div class="col-xs-2 goal">
-          <div class="pull-left">
+        <div class="col-xs-5 goal">{{goal.description}}</div>
+        <div class="col-md-3 goal"><button type="button" class="btn btn-default">{{goal.result}}</button></div>
+        <div class="col-md-3 goal">
             <label class="btn btn-success">
               <div class="negrita"></div>
-              <span class="glyphicon glyphicon-ok" aria-hidden="true" ng-click="addOk(goal) ng-class="{'negrita': 1==1}"></span>
+              <span class="glyphicon glyphicon-ok" aria-hidden="true" ng-click="addOk(goal)"></span>
             </label>
             <label class="btn btn-danger">
-              <span class="glyphicon glyphicon-remove" aria-hidden="true" ng-click="addKo(goal)"></span>
+              <label>
+              <span class="glyphicon glyphicon-remove" aria-hidden="true" ng-click="addKo(goal)">  </span>
             </label>
+          </label>
           </div>
         </div>
       </div>
