@@ -50,7 +50,7 @@
        </div>
       <div ng-repeat="goal in goals" class="form-group row form-row">
         <div class"cols-xs-1">
-        <div class="col-xs-3"><font size=3 ng-class="{'has-error': goal.result==-1, 'has-noterror': goal.result==1}">{{goal.description}}</font></div></div>
+        <div class="col-xs-3"><font size=3 ng-class="{'has-error': goal.result==1, 'has-noterror': goal.result==-1}">{{goal.description}}</font></div></div>
         <div class="col-md-3"><button type="button" class="btn btn-default">{{goal.result}}</button></div>
         <div class="col-md-3 "><label class="btn btn-success">
           <span class="glyphicon glyphicon-ok" aria-hidden="true" ng-click="addOk(goal)"></span>
