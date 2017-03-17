@@ -35,8 +35,12 @@ body {
     color: red;
 }
 .has-error {
-    color: red;
-    background-color: yellow;
+    color: white;
+    background-color: green;
+}
+.has-noterror {
+    color: white;
+    background-color: red;
 }
 .orange {
     color: orange;
